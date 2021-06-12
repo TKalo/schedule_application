@@ -1,8 +1,8 @@
 
 import 'package:schedule_application/StructureModule/MainViewModel.dart';
 import 'package:schedule_application/StructureModule/support/CustomRX.dart';
-import 'package:schedule_application/StructureModule/support/RequestProgress.dart';
 import 'package:schedule_application_conn/ConnectionModule/WebSocketRequest.dart';
+import 'package:schedule_application_entities/DataObjects/RequestProgress.dart';
 import 'package:schedule_application_entities/DataObjects/WorkerCreationRequest.dart';
 
 class WorkerRequestsViewModel {

@@ -1,6 +1,7 @@
 
 
 import 'package:schedule_application/StructureModule/MainViewModel.dart';
+import 'package:schedule_application_entities/DataObjects/RequestProgress.dart';
 import 'package:schedule_application_entities/DataObjects/ShiftTemplate.dart';
 import 'package:schedule_application_entities/DataObjects/WorkerCreationRequest.dart';
 class ShiftsViewModel {

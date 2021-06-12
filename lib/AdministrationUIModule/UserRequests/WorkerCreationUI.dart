@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:schedule_application/AdministrationUIModule/UserRequests/WorkerRequestsViewModel.dart';
 import 'package:schedule_application/StructureModule/MainViewModel.dart';
 import 'package:schedule_application/StructureModule/support/CustomComponents.dart';
-import 'package:schedule_application/StructureModule/support/RequestProgress.dart';
+import 'package:schedule_application_entities/DataObjects/RequestProgress.dart';
 import 'package:schedule_application_entities/DataObjects/WorkerCreationRequest.dart';
 
 class WorkerCreationUI extends StatelessWidget {

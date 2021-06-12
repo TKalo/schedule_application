@@ -1,8 +1,8 @@
 
 import 'package:schedule_application/AdministrationUIModule/Main/AdminRepository.dart';
 import 'package:schedule_application/StructureModule/MainViewModel.dart';
-import 'package:schedule_application/StructureModule/support/RequestProgress.dart';
 import 'package:schedule_application_conn/ConnectionModule/RestConnection.dart';
+import 'package:schedule_application_entities/DataObjects/RequestProgress.dart';
 
 class AdminViewModel {
   static final AdminViewModel _singleton = AdminViewModel._internal();

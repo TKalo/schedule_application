@@ -5,7 +5,7 @@ import 'package:schedule_application/AdministrationUIModule/Main/AdminRepository
 import 'package:schedule_application/AdministrationUIModule/Main/AdminViewModel.dart';
 import 'package:schedule_application/StructureModule/MainViewModel.dart';
 import 'package:schedule_application/StructureModule/support/CustomComponents.dart';
-import 'package:schedule_application/StructureModule/support/RequestProgress.dart';
+import 'package:schedule_application_entities/DataObjects/RequestProgress.dart';
 
 class NewStoreUI extends StatelessWidget {
 

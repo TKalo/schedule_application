@@ -23,6 +23,9 @@ class AdminRepository{
   final RxValue<Store> currentUserStore = RxValue();
   final RxValue<ScheduleTemplate> scheduleTemplate = RxValue();
 
+  get scheduleDeadlines => null;
+
+
   void getData()async{
     WebSocketSubscriptions().userCreationRequestSubscribe((await currentUserStore.getData.first).id, (result){
       if([PostCommand.ADD, PostCommand.UPDATE].contains(result.command)){

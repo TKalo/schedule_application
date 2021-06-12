@@ -1,9 +1,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:schedule_application/StructureModule/MainViewModel.dart';
-import 'package:schedule_application/StructureModule/support/RequestProgress.dart';
 import 'package:schedule_application_conn/ConnectionModule/WebSocketConnection.dart';
 import 'package:schedule_application_conn/ConnectionModule/WebSocketSingleValue.dart';
+import 'package:schedule_application_entities/DataObjects/RequestProgress.dart';
 import 'package:schedule_application_entities/DataObjects/UserType.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
