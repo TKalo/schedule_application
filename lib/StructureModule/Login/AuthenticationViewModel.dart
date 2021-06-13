@@ -43,7 +43,9 @@ class AuthenticationViewModel {
           MainViewModel().currentUser.setData(await WebSocketSingleValue().getCurrentUser());
           onAuthenticated();
         },
-        onError: (String error){}
+        onError: (String error){
+          print(error);
+        }
     );
   }
 
@@ -68,6 +70,7 @@ class AuthenticationViewModel {
           },
           onError: (String error) {
             //Toast.show(error, context, duration: 3);
+            print(error);
             MainViewModel().requestProgress.setData(RequestProgress.DENIED);
           }
       );
