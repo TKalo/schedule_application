@@ -9,10 +9,10 @@ import 'package:schedule_application_entities/DataObjects/Store.dart';
 import 'package:schedule_application_entities/DataObjects/StoreCreationValues.dart';
 import 'package:schedule_application_entities/DataObjects/WorkerCreationRequest.dart';
 
-class AdminRepository{
-  static final AdminRepository _singleton = AdminRepository._internal();
-  factory AdminRepository(){return _singleton;}
-  AdminRepository._internal(){
+class StoreRepository{
+  static final StoreRepository _singleton = StoreRepository._internal();
+  factory StoreRepository(){return _singleton;}
+  StoreRepository._internal(){
     getData();
   }
 

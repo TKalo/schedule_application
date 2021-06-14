@@ -7,6 +7,6 @@ class MainPage{
   Widget page;
   List<UnicornButton> fabButton;
 
-  MainPage({@required this.barItem,@required this.page,@required this.fabButton,});
+  MainPage({@required this.barItem,@required this.page, this.fabButton});
 
 }

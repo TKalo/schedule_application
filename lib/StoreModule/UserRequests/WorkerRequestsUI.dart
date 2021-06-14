@@ -2,13 +2,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:schedule_application/AdministrationUIModule/Main/AdminRepository.dart';
-import 'package:schedule_application/AdministrationUIModule/UserRequests/WorkerRequestsViewModel.dart';
+import 'package:schedule_application/StoreModule/Main/StoreRepository.dart';
 import 'package:schedule_application/StructureModule/MainViewModel.dart';
 import 'package:schedule_application/StructureModule/support/CustomComponents.dart';
 import 'package:schedule_application_entities/DataObjects/WorkerCreationRequest.dart';
 
 import 'WorkerCreationUI.dart';
+import 'WorkerRequestsViewModel.dart';
 
 class WorkerRequestsUI extends StatelessWidget {
 
@@ -49,7 +49,7 @@ class WorkerRequestsUI extends StatelessWidget {
 
             Expanded(
               child: StreamBuilder<Map<int, WorkerCreationRequest>>(
-                stream: AdminRepository().userCreationRequests.getData,
+                stream: StoreRepository().userCreationRequests.getData,
                 builder: (context, snapshot) {
                   if(!snapshot.hasData) return Container(color: Colors.red,);
                   Map<int, WorkerCreationRequest> requests = snapshot.data;

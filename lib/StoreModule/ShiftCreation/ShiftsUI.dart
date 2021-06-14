@@ -1,7 +1,7 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:schedule_application/AdministrationUIModule/Main/AdminRepository.dart';
+import 'package:schedule_application/StoreModule/Main/StoreRepository.dart';
 import 'package:schedule_application_entities/DataObjects/ShiftTemplate.dart';
 
 
@@ -12,7 +12,7 @@ class ShiftsUI extends StatelessWidget {
   Widget build(BuildContext context) {
     return StreamBuilder<List<ShiftTemplate>>(
       initialData: [],
-      stream: AdminRepository().shifts.getData,
+      stream: StoreRepository().shifts.getData,
       builder: (BuildContext context, AsyncSnapshot<List<ShiftTemplate>> snapshot) {
         if(!snapshot.hasData) return Container();
         List<ShiftTemplate> shifts = snapshot.data;

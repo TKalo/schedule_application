@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:regexed_validator/regexed_validator.dart';
 import 'package:schedule_application/StructureModule/MainViewModel.dart';
 import 'package:schedule_application/StructureModule/support/CustomComponents.dart';
-import 'package:schedule_application/WorkerUIModule/Main/WorkerRepository.dart';
-import 'package:schedule_application/WorkerUIModule/Main/WorkerViewModel.dart';
 import 'package:schedule_application_entities/DataObjects/RequestProgress.dart';
+
+import 'WorkerRepository.dart';
+import 'WorkerViewModel.dart';
 
 class NewUserUI extends StatelessWidget {
 

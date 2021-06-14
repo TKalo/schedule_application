@@ -3,7 +3,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:schedule_application/StructureModule/support/CustomComponents.dart';
-import 'package:schedule_application/WorkerUIModule/Main/WorkerRepository.dart';
+import 'package:schedule_application/WorkerModule/Main/WorkerRepository.dart';
 import 'package:schedule_application_entities/DataObjects/ShiftTemplate.dart';
 
 import 'PreferenceViewModel.dart';

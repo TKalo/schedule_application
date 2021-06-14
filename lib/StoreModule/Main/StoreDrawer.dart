@@ -3,12 +3,10 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:schedule_application/AdministrationUIModule/UserRequests/WorkerRequestsUI.dart';
+import 'package:schedule_application/StoreModule/UserRequests/WorkerRequestsUI.dart';
 import 'package:schedule_application/StructureModule/MainViewModel.dart';
-import 'package:schedule_application/StructureModule/support/CustomComponents.dart';
-import 'package:schedule_application/StructureModule/support/Strings.dart';
 
-class AdminDrawer extends StatelessWidget {
+class StoreDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(

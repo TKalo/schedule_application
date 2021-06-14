@@ -1,18 +1,16 @@
 
 import 'package:flutter/material.dart';
-import 'package:schedule_application/AdministrationUIModule/Main/AdminRepository.dart';
 import 'package:schedule_application/StructureModule/Login/LoginUI.dart';
 import 'package:schedule_application/StructureModule/MainViewModel.dart';
 import 'package:schedule_application_conn/ConnectionModule/WebSocketConnection.dart';
 import 'package:schedule_application_conn/ConnectionModule/WebSocketSingleValue.dart';
 import 'package:schedule_application_entities/DataObjects/UserType.dart';
 
-import 'AdminMainUI.dart';
-import 'NewStoreUI.dart';
+import 'StoreMainUI.dart';
+import 'StoreRepository.dart';
+import 'StoreCreationUI.dart';
 
-void main() {
-  runApp(Application());
-}
+void main() => runApp(Application());
 
 class Application extends StatefulWidget {
   @override
@@ -30,11 +28,11 @@ class _ApplicationState extends State<Application> with WidgetsBindingObserver{
       navigatorKey: MainViewModel().navigatorKey,
       routes: {'/' : (context) => LoginUI(
           userType: UserType.store_administrator,
-          creationWidget: NewStoreUI(),
+          creationWidget: StoreCreationUI(),
           creationWidgetTitle: "new store",
           onAuthenticated: () {
-            WebSocketSingleValue().getCurrentUserStore().then((value) => AdminRepository().currentUserStore.setData(value));
-            MainViewModel().navigate(location: AdminMainUI());
+            WebSocketSingleValue().getCurrentUserStore().then((value) => StoreRepository().currentUserStore.setData(value));
+            MainViewModel().navigate(location: StoreMainUI());
           })
       },
     );

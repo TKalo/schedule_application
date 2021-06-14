@@ -1,6 +1,6 @@
 
 
-import 'package:schedule_application/AdministrationUIModule/Main/AdminRepository.dart';
+import 'package:schedule_application/StoreModule/Main/StoreRepository.dart';
 import 'package:schedule_application/StructureModule/support/CustomRX.dart';
 import 'package:schedule_application_conn/ConnectionModule/WebSocketRequest.dart';
 import 'package:schedule_application_entities/DataObjects/ScheduleTemplate.dart';
@@ -10,7 +10,7 @@ class ScheduleDeadlineViewModel {
   factory ScheduleDeadlineViewModel(){return _singleton;}
   ScheduleDeadlineViewModel._internal(){
     localDeadlines.setData(ScheduleTemplate());
-    AdminRepository().scheduleDeadlines.getData.listen((value) {
+    StoreRepository().scheduleDeadlines.getData.listen((value) {
       savedDeadlines = ScheduleTemplate(storeId: value.storeId, preferenceDeadline: value.preferenceDeadline, creationDeadline: value.creationDeadline, initiationDeadline: value.initiationDeadline, weeks: value.weeks);
       localDeadlines.setData(value);});
     localDeadlines.getData.listen((template) => setDateTimeLimitations(template));

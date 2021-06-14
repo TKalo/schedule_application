@@ -3,11 +3,12 @@
 
 import 'package:enum_to_string/enum_to_string.dart';
 import 'package:flutter/material.dart';
-import 'package:schedule_application/AdministrationUIModule/UserRequests/WorkerRequestsViewModel.dart';
 import 'package:schedule_application/StructureModule/MainViewModel.dart';
 import 'package:schedule_application/StructureModule/support/CustomComponents.dart';
 import 'package:schedule_application_entities/DataObjects/RequestProgress.dart';
 import 'package:schedule_application_entities/DataObjects/WorkerCreationRequest.dart';
+
+import 'WorkerRequestsViewModel.dart';
 
 class WorkerCreationUI extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
@@ -44,7 +45,7 @@ class WorkerCreationUI extends StatelessWidget {
                                   value: snapshot.data,
                                   color: Colors.blue,
                                   items: WorkerType.values.map<DropdownMenuItem<WorkerType>>((weekDay) => DropdownMenuItem(value: weekDay, child: Text(EnumToString.convertToString(weekDay),))).toList(),
-                                  onChanged: (workerType)=>WorkerRequestsViewModel().workerType.setData(workerType)
+                                  onChanged: (workerType) => WorkerRequestsViewModel().workerType.setData(workerType)
                                 ),
                               ],
                             );

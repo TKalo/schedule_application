@@ -1,7 +1,7 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:schedule_application/AdministrationUIModule/ShiftCreation/ShiftCreationUI.dart';
+import 'package:schedule_application/StoreModule/ShiftCreation/ShiftCreationUI.dart';
 import 'package:schedule_application/StructureModule/MainViewModel.dart';
 import 'package:schedule_application/StructureModule/NavigationUI.dart';
 import 'package:schedule_application/StructureModule/support/MainPage.dart';
@@ -9,9 +9,9 @@ import 'package:unicorndial/unicorndial.dart';
 
 import '../ScheduleDeadline/ScheduleDeadlineUI.dart';
 import '../ShiftCreation/ShiftsUI.dart';
-import 'AdminDrawer.dart';
+import 'StoreDrawer.dart';
 
-class AdminMainUI extends StatelessWidget {
+class StoreMainUI extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,6 @@ class AdminMainUI extends StatelessWidget {
                 label: "off day requests"
             ),
             page: Container(key: ValueKey<int>(2),color:Colors.white),
-            fabButton: null
         ),
         MainPage(
             barItem: BottomNavigationBarItem(
@@ -31,7 +30,7 @@ class AdminMainUI extends StatelessWidget {
                 label: "schedule issues"
             ),
             page: Container(key: ValueKey<int>(2),color:Colors.white),
-            fabButton: null
+
         ),
         MainPage(
             barItem: BottomNavigationBarItem(
@@ -51,10 +50,9 @@ class AdminMainUI extends StatelessWidget {
                 label: "schedule values"
             ),
             page: ScheduleDeadlineUI(),
-            fabButton: null
         ),
       ],
-      drawer: AdminDrawer(),
+      drawer: StoreDrawer(),
     );
   }
 }
